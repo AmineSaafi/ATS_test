@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <center><h2>ATS</h2></center>
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <h3>Product List</h3>
+                    <div class="button">
+
+                    </div>
+                </div>
+                <div class="panel-body">
+                    {#<div class="count">
+                        {{ pagination.getTotalItemCount }}
+                    </div>#}
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            {# sorting of properties based on query components #}
+                            <th>{{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</th>
+                            <th{% if pagination.isSorted('a.productName') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'Product name', 'a.productName') }}</th>
+                            <th>{{ knp_pagination_sortable(pagination, 'Base Price', 'a.basePrice') }}</th>
+                            <th>{{ knp_pagination_sortable(pagination, 'Category', 'a.category') }}</th>
+                            <th>Brand</th>
+                            <th>Product Material</th>
+                            <th>Image Url</th>
+                            <th>Delivery</th>
+                            <th>Details</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for prod in pagination %}
+                            <tr>
+                                <td>{{ prod.id }}</td>
+                                <td>{{ prod.productName }}</td>
+                                <td>{{ prod.basePrice }}</td>
+                                <td>{{ prod.category }}</td>
+                                <td>{{ prod.brand }}</td>
+                                <td>{{ prod.productMaterial }}</td>
+                                <td>{{ prod.imageUrl }}</td>
+                                <td>{{ prod.delivery }}</td>
+                                <td>{{ prod.details }}</td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    <!-- Pagination -->
+                    <div class="navigation text-center">
+                        {{ knp_pagination_render(pagination) }}
+                    </div>
+                    <!-- End Pagination -->
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

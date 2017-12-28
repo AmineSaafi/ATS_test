@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Découvrez, Trouvez et Partagez des livres avec Déjà Lu, site collaboratif de partage et de recommandation dédié aux lecteurs. Notre objectif : relancer l'Amour de la lecture. Avis, notes, discussions : vous pouvez échanger avant, pendant et après vos lectures ! Ensemble, diffusons notre amour de la lecture">
+    <meta name="author" content="Me">
+
+    <title>ATS</title>
+
+    <link rel="stylesheet" href="{{ asset('bundles/product/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/product/css/bootstrap-social.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/product/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/product/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/product/fonts/font-awesome.min.css') }}">
+
+
+
+
+    <!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
+    <!--[if lt IE 9]>
+    <script src="{{ asset('bundles/product/js/html5shiv.js') }}"></script>
+    <script src="{{ asset('bundles/product/js/respond.min.js') }}"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!-- ============================================================= HEADER ============================================================= -->
+<header>
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand pull-left" href="">
+                <img src="">
+            </a>
+        </div>
+    </nav>
+</header>
+<!-- ============================================================= HEADER : END ============================================================= -->
+
+
+<!-- ============================================================= SECTION – RECIPE ============================================================= -->
+<main>
+    <section>
+        <div class="container-fluid">
+            <div class="container h100" >
+                <div class="col-md-12 pos-r h100">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- ============================================================= SECTION – RECIPE : END ============================================================= -->
+
+
+<!-- ============================================================= SECTION – FOOTER ============================================================= -->
+<footer>
+    <div class="container-fluid row">
+        <div class="bottom-links-icons">
+            <ul>
+                <li><a href="#"><img title="FAQ" src="{{ asset('bundles/product/img/icons/icon-faq.svg') }}"/></a></li>
+                <li><a href="#"><img title="CGU" src="{{ asset('bundles/product/img/icons/icon-cgu.svg') }}"/></a></li>
+                <li><a href="#"><img title="Nous contacter" src="{{ asset('bundles/product/img/icons/icon-contact.svg') }}"/></a></li>
+            </ul>
+        </div>
+        <div class="bottom-links">
+            <ul>
+                <li><a href="#">Faq</a></li><li><a href="#">CGU</a></li><li><a href="#">Nous contacter</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- ============================================================= FOOTER : END ============================================================= -->
+<!-- JavaScripts placed at the end of the document so the pages load faster -->
+
+</body>
+</html>
